@@ -1,4 +1,4 @@
-# census_data
+# R scripts that use census data
 Repository with R scripts using census data. Containing:
 
 1) wards_population.R
