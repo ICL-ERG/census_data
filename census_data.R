@@ -1,3 +1,4 @@
+## Increase Java memory size for this session.
 options(java.parameters = "- Xmx1024m")
 
 rm(list = ls())  # Clear the workspace
@@ -11,7 +12,7 @@ library(spdep)   # spatial dependence
 require(xlsx)    # for importing xlsx
 library(GISTools)
 
-setwd("~/mounts/vse/James/Mini Projects/mobile_phone_study")
+setwd("~/Desktop")
 
 ###################################
 ## Get the boundary data for London
@@ -70,10 +71,10 @@ boundaries@data <- data.frame(boundaries@data, population[match(boundaries@data[
 rm(population)
 
 #############################################
-## Export as a shapefile for Maggie
+## Export as a shapefile
 
 writeOGR(obj=boundaries, dsn="tempdir", layer="boundaries", driver="ESRI Shapefile") # this is in geographical projection
 
-## In QGIS edit the City of London population to be
+## In QGIS or similar edit the City of London population manually as it's merged.
 
 city_london_population <- sum(as.numeric(population[population$Local.Authority == 'City of London',]$All.Ages))
