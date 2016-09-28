@@ -16,6 +16,7 @@ setwd("~/Desktop")
 
 ###################################
 ## Get the boundary data for London
+## Might want to replace with this: https://geoportal.statistics.gov.uk/Docs/Boundaries/Wards_(E+W)_2011_Boundaries_(Full_Extent).zip
 
 latlong = "+init=epsg:4326"
 ukgrid = "+init=epsg:27700"
